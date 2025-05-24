@@ -28,11 +28,9 @@ def verificar_afirmacao(afirmacao):
 
         for claim in claims:
             texto_claim = claim.get('text', '')
-            print(texto_claim)
             score = similaridade(afirmacao, texto_claim)
-            print(f"Similaridade: {score:.2f}")
 
-            if score >= 0.6:
+            if score >= 0.45:
                 encontrou_relacionado = True
                 break
 
